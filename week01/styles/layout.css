@@ -8,8 +8,7 @@ header {
 
 .navigation {
     display: flex;
-    align-items: center;
-    flex: 1 1 auto;
+    justify-content: space-evenly;
     background-color: #333;
 }
 
