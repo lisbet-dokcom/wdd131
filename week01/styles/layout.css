@@ -1,0 +1,26 @@
+h3 {
+    background-color: brown;
+}
+
+header {
+    background-color: antiquewhite;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    background-color: #333;
+}
+
+.navigation a {
+    display: block;
+    color: #eee;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
