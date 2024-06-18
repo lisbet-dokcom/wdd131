@@ -29,6 +29,10 @@ nav a {
     text-align: center;
 }
 
+a :hover {
+    color: brown;
+}
+
 a {
     text-decoration: none;
 }
