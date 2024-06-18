@@ -29,8 +29,8 @@ nav a {
     text-align: center;
 }
 
-a :hover {
-    color: brown;
+a:hover {
+    color: grey;
 }
 
 a {
