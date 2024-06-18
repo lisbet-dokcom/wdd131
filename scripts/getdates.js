@@ -1,15 +1,23 @@
+// select the DOM elements for output
+
 const short = document.querySelector("#short");
+
+// use the date object
 const today = new Date();
 
-short.innerHTML = `Short: <span class="highlight">${new Intl.DateTimeFormat("en-US", { dateStyle: "short" }).format(today)}</span>`;
-const year = document.querySelector("#year");
-year.innerHTML = `getFullYear(): <span class="highlight">${today.getFullYear()}</span>`;
+short.innerHTML = `Short: <span class="highlight">${new Intl.DateTimeFormat(
+    "en-US",
+    {
+        dateStyle: "short"
+    }
+).format(today)}</span>`;
 
-const month = document.querySelector("#month");
-month.innerHTML = `getMonth(): <span class="highlight">${today.getMonth() + 1}</span>`; // Months are 0-based, so add 1
 
-const day = document.querySelector("#day");
-day.innerHTML = `getDate(): <span class="highlight">${today.getDate()}</span>`;
+// Get the current year
+const currentYear = new Date().getFullYear();
+document.getElementById("currentyear").innerHTML = currentYear;
 
-const dayofweek = document.querySelector("#dayofweek");
-dayofweek.innerHTML = `getDay(): <span class="highlight">${today.getDay()}</span>`;
+// Get the last modified date
+const lastModified = document.lastModified;
+document.getElementById("lastModified").innerHTML = `Last Modified: ${lastModified}`;
+
