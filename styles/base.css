@@ -102,3 +102,7 @@ footer p {
     color: #eee;
     padding: 10px;
 }
+
+.lastModified {
+    color: gold;
+}
