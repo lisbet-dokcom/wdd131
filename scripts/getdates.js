@@ -5,4 +5,4 @@ const lastModified = document.lastModified;
 document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
 
 const name = document.name;
-document.getElementById('name').textContent = 'Elizabeth Okon';
+document.getElementById('name').innerHTML = 'Elizabeth Okon';
