@@ -1,51 +1,62 @@
 header {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #190E4f;
+    padding: 10px;
+}
+
+#menu {
+    display: none;
 }
 
 h1 {
     color: white;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0;
     padding: 10px;
-    font-size: larger;
+    font-size: 1.6rem;
 }
 
-nav {
+.nav {
     display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
+    gap: 20px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     color: white;
+    font-size: 1.2rem;
 }
 
-nav a:hover {
-    background-color: bisque;
-    color: black;
+.nav a:hover {
+    text-decoration: underline;
 }
 
 main {
-    max-width: 960px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
 }
 
 img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .figure {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
 }
 
 figcaption {
-    font-size: larger;
-    text-align: justify;
+    font-size: 1rem;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -69,4 +80,3 @@ footer #lastModified {
     color: gold;
     display: inline;
 }
-
