@@ -21,14 +21,9 @@
 	.nav {
 		display: none;
 		flex-direction: column;
-		background-color: #190E4f;
+		background-color: #000505;
 	}
 
-	/* .nav a {
-		color: #fff;
-		text-align: center;
-		text-decoration: none;
-	} */
 	.nav a {
 		display: block;
 		color: #fff;
@@ -43,10 +38,6 @@
 
 	.nav.open {
 		display: flex;
-	}
-
-	h1 {
-		text-align: left;
 	}
 
 	header,
