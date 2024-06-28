@@ -33,7 +33,7 @@
 	}
 
 	.nav a:hover {
-		text-decoration: beige;
+		text-decoration: underline;
 	}
 
 	.nav.open {
