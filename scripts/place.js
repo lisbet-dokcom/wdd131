@@ -5,9 +5,14 @@ const calculateWindChill = function (temperature, windSpeed) {
     return 13.12 + 0.6215 * (temperature) - 11.37 * (windSpeed ** 0.16) + 0.3965 * (temperature) * (windSpeed ** 0.16)
 }
 
-const chill = calculateWindChill(temperature, windSpeed);
-const windchillElement = document.windchill;
-document.getElementById("chill").innerHTML = `${chill.toFixed(1)} °C`;
+let chill;
+
+if (temperature <= 10 && windSpeed > 4.8) {
+    chill = calculateWindChill(temperature, windSpeed);
+    document.getElementById("chill").innerHTML = `${chill.toFixed(1)} °C`;
+} else {
+    document.getElementById("chill").innerHTML = "N/A";
+}
 
 const tempElement = document.temp;
 document.getElementById("temp").innerHTML = `${temperature} °C`;
