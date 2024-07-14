@@ -1,18 +1,8 @@
 @media screen and (max-width: 600px) {
     * {
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
     }
-
-    header {
-        background-color: yellowgreen;
-        color: greenyellow;
-        padding: 20px;
-        text-align: center;
-    }
-
-    h2 {
-        text-align: center;
-
-    }
-
 }

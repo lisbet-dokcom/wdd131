@@ -22,7 +22,7 @@ h2 {
 footer {
     font-size: 1.5rem;
     text-align: center;
-    background-color: greenyellow;
+    background-color: #190E4f;
     color: #eee;
     margin: 0;
 }
@@ -36,6 +36,6 @@ footer p {
 }
 
 footer #lastModified {
-    color: green;
+    color: gold;
     display: inline;
 }
