@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,78 @@
     <meta name="author" content="Elizabeth">
     <title>WDD - Country - Elizabeth</title>
     <script src="scripts/place.js" defer></script>
-    <link rel="stylesheet" href="styles/place-mobileview.css">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-mobileview.css">
+
 </head>
+
 <body>
     <header>
         <h1>South Africa</h1>
     </header>
     <main>
+        <picture>
+            <source srcset="images/southafrica-high.webp" media="(min-width: 600px)">
+            <img src="images/southafrica-small.webp" alt="South Africa">
+        </picture>
         <section class="data">
+            <h2>Data</h2>
+            <div>
+                <span><strong>Area:</strong></span>
+                <span>1,221,037 sq km</span>
+            </div>
+            <div>
+                <span><strong>Population:</strong></span>
+                <span>60 million people</span>
+            </div>
+            <div>
+                <span><strong>Capital:</strong></span>
+                <span>Pretoria</span>
+            </div>
+            <div>
+                <span><strong>Languages:</strong></span>
+                <span>isiZulu, isiXhosa, Afrikaans, English</span>
+            </div>
+            <div>
+                <span><strong>Currency:</strong></span>
+                <span>South African Rand (ZAR)</span>
+            </div>
+            <div>
+                <span><strong>Time:</strong></span>
+                <span>UTC +2</span>
+            </div>
+            <div>
+                <span><strong>Calling Code:</strong></span>
+                <span>+27</span>
+            </div>
+            <div>
+                <span><strong>Internet TLD:</strong></span>
+                <span>.za</span>
+            </div>
         </section>
-        <section class="weather"></section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <div>
+                <span><strong>Temperature:</strong></span>
+                <span id="temp"></span>
+            </div>
+            <div>
+                <span><strong>Conditions:</strong></span>
+                <span>Partly Cloudy</span>
+            </div>
+            <div>
+                <span><strong>Wind:</strong></span>
+                <span id="wind"></span>
+            </div>
+            <div>
+                <span><strong>Wind Chill:</strong></span>
+                <span id="chill"></span>
+            </div>
+        </section>
     </main>
     <footer>
         <p>©<span id="currentyear"></span> 🌴 Elizabeth 🌴 Nigeria - <span id="lastModified"></span></p>
     </footer>
 </body>
+
 </html>
