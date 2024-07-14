@@ -18,10 +18,10 @@
         <h1>South Africa</h1>
     </header>
     <main>
-        <picture>
-            <source srcset="images/southafrica-high.webp" media="(min-width: 600px)">
-            <img src="images/southafrica-small.webp" alt="South Africa">
-        </picture>
+        <div class="hero">
+            <img src="images/sa-small.webp" srcset="images/sa-large.webp 1200w"
+                sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px" alt="South Africa image">
+        </div>
         <section class="data">
             <h2>Data</h2>
             <div>
@@ -59,6 +59,7 @@
         </section>
         <section class="weather">
             <h2>Weather</h2>
+            <img src="images/sun.svg" , alt="Partly Cloudy" , width="150px" , height="100px">
             <div>
                 <span><strong>Temperature:</strong></span>
                 <span id="temp"></span>
