@@ -18,64 +18,69 @@
         <h1>South Africa</h1>
     </header>
     <main>
-        <div class="hero">
-            <img src="images/sa-small.webp" srcset="images/sa-large.webp 1200w"
-                sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px" alt="South Africa image">
-        </div>
-        <section class="data">
+        <picture>
+            <source media="(min-width: 1000px)" srcset="=images/sa-large.webp">
+            <source media="(min-width: 5000px)" srcset="images/sa-medium.webp">
+            <img src="images/sa-small.webp" alt="A Landscape photo of wildlife in SouthAfrica">
+        </picture>
+        <section class="card data">
             <h2>Data</h2>
-            <div>
-                <span><strong>Area:</strong></span>
-                <span>1,221,037 sq km</span>
-            </div>
-            <div>
-                <span><strong>Population:</strong></span>
-                <span>60 million people</span>
-            </div>
-            <div>
-                <span><strong>Capital:</strong></span>
-                <span>Pretoria</span>
-            </div>
-            <div>
-                <span><strong>Languages:</strong></span>
-                <span>isiZulu, isiXhosa, Afrikaans, English</span>
-            </div>
-            <div>
-                <span><strong>Currency:</strong></span>
-                <span>South African Rand (ZAR)</span>
-            </div>
-            <div>
-                <span><strong>Time:</strong></span>
-                <span>UTC +2</span>
-            </div>
-            <div>
-                <span><strong>Calling Code:</strong></span>
-                <span>+27</span>
-            </div>
-            <div>
-                <span><strong>Internet TLD:</strong></span>
-                <span>.za</span>
-            </div>
+            <table>
+                <tr>
+                    <th>Area:</th>
+                    <td>1,221,037 sq km</td>
+                </tr>
+                <tr>
+                    <th>Population:</th>
+                    <td>60 million people</td>
+                </tr>
+                <tr>
+                    <th>Captial:</th>
+                    <td>Pretoria</td>
+                </tr>
+                <tr>
+                    <th>Languages:</th>
+                    <td>isiZulu, isiXhosa, Afrikaans, English</td>
+                </tr>
+                <tr>
+                    <th>Currency:</th>
+                    <td>South Africa Rand (ZAR)</td>
+                </tr>
+                <tr>
+                    <th>Time:</th>
+                    <td>UTC +2</td>
+                </tr>
+                <tr>
+                    <th>Calling Code:</th>
+                    <td>+27</td>
+                </tr>
+                <tr>
+                    <th>Internet TLD:</th>
+                    <td>.za</td>
+                </tr>
+            </table>
         </section>
-        <section class="weather">
+        <section class="card temp">
             <h2>Weather</h2>
-            <img src="images/sun.svg" , alt="Partly Cloudy" , width="150px" , height="100px">
-            <div>
-                <span><strong>Temperature:</strong></span>
-                <span id="temp"></span>
-            </div>
-            <div>
-                <span><strong>Conditions:</strong></span>
-                <span>Partly Cloudy</span>
-            </div>
-            <div>
-                <span><strong>Wind:</strong></span>
-                <span id="wind"></span>
-            </div>
-            <div>
-                <span><strong>Wind Chill:</strong></span>
-                <span id="chill"></span>
-            </div>
+            <img src="images/sun.svg" alt="Partly Cloud" , width="100">
+            <table>
+                <tr>
+                    <th>Temperature:</th>
+                    <td><span id="temp"></span></td>
+                </tr>
+                <tr>
+                    <th>Conditions:</th>
+                    <td>Partly Cloudly</td>
+                </tr>
+                <tr>
+                    <th>Wind:</th>
+                <tr><span id="wind"></span></tr>
+                </tr>
+                <tr>
+                    <th>WindChill:</th>
+                    <td><span id="chill"></span></td>
+                </tr>
+            </table>
         </section>
     </main>
     <footer>
