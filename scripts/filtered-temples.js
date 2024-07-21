@@ -1,3 +1,17 @@
+const currentYear = new Date().getFullYear();
+document.getElementById("currentyear").innerHTML = currentYear;
+
+const lastModified = document.lastModified;
+document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+
+const hazButton = document.querySelector('#menu');
+const nav = document.querySelector('.nav');
+
+hazButton.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  hazButton.classList.toggle('open');
+});
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -64,17 +78,88 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/albuquerque-new-mexico/400x250/albuquerque-temple-lds-998219-wallpaper.jpg"
   },
   {
-    templeName: "Cebu Philippines Temple",
-    location: "Cebu Philippines",
-    dedicated: "2010, June, 13",
+    templeName: "Perth Australia Temple",
+    location: "Yokin, Western Australia",
+    dedicated: "2001, May, 20",
     area: 6000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cebu-city-philippines/400x250/cebu-philippines-temple-lds-704567-wallpaper.jpg"
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/perth-australia/400x250/perth-australia-temple-lds-957466-wallpaper.jpg"
   },
   {
     templeName: "Idaho Falls Idaho Temple",
     location: "Idaho, United States",
     dedicated: "2017, June, 4",
-    area: 83402,
+    area: 10700,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/idaho-falls-idaho/2019/400x250/7-Idaho-Falls-Temple-1375367.jpg"
+  },
+  {
+    templeName: "Hartford Connecticut Temple",
+    location: "Connecticut, States",
+    dedicated: "2016, November, 20",
+    area: 32246,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/hartford-connecticut/400x250/hartford-temples-steeples-angel-moroni-1808856-wallpaper.jpg"
+  },
+  {
+    templeName: "Melbourne Australia Temple",
+    location: "Melbourne, Australia",
+    dedicated: "2000, June, 16",
+    area: 10700,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/melbourne-australia/400x250/melbourne-austrailia-temple-lds-991373-wallpaper.jpg"
   }
 ];
+
+function DisplayTemples(temples) {
+  const gallery = document.getElementById("gallery");
+  gallery.innerHTML = "";
+  temples.forEach(function (temple) {
+    const card = document.createElement("div");
+    card.className = "temple-card";
+
+    card.innerHTML = `
+    <h2>${temple.templeName}</h2>
+    <p>Location: ${temple.location}</p>
+    <p>Dedication: ${temple.dedicated}</p>
+    <p>Size: ${temple.area}</p>`
+
+    const image = document.createElement("img");
+    image.src = temple.imageUrl;
+    image.alt = temple.templeName;
+    image.loading = "lazy";
+    card.appendChild(image);
+
+    gallery.appendChild(card);
+  })
+}
+
+const allTemplesLink = document.querySelector("#all-temples");
+const oldTemplesLink = document.querySelector("#old-temples");
+const newTemplesLink = document.querySelector("#new-temples");
+const largeTemplesLink = document.querySelector("#large-temples");
+const smallTemplesLink = document.querySelector("#small-temples");
+const selection = document.querySelector("#selection");
+
+allTemplesLink.addEventListener("click", () => {
+  DisplayTemples(temples);
+  selection.innerText = "All Temples";
+});
+oldTemplesLink.addEventListener("click", () => {
+  const filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+  DisplayTemples(filteredTemples);
+  selection.innerText = "Old Temples";
+});
+newTemplesLink.addEventListener("click", () => {
+  const filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+  DisplayTemples(filteredTemples);
+  selection.innerText = "New Temples";
+});
+largeTemplesLink.addEventListener("click", () => {
+  const filteredTemples = temples.filter(temple => temple.area > 90000);
+  DisplayTemples(filteredTemples);
+  selection.innerText = "Large Temples";
+});
+smallTemplesLink.addEventListener("click", () => {
+  const filteredTemples = temples.filter(temple => temple.area < 10000);
+  DisplayTemples(filteredTemples);
+  selection.innerText = "Small Temples";
+});
+
+DisplayTemples(temples);

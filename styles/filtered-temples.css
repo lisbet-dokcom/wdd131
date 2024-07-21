@@ -38,7 +38,7 @@ main {
     padding: 20px;
 }
 
-h2 {
+#selection {
     font-size: 2rem;
     text-align: center;
 }
@@ -48,7 +48,7 @@ img {
     max-width: 300px;
 }
 
-.figure {
+#gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
@@ -59,6 +59,34 @@ figcaption {
     text-align: center;
     font-weight: bold;
 }
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#gallery div {
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    max-width: 350px;
+    padding: 10px;
+}
+
+#gallery img {
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 10px 3px grey;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+
 
 footer {
     font-size: 1.5rem;

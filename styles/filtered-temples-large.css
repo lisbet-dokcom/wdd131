@@ -1,10 +1,10 @@
-@media (max-width: 500px) {
+@media (max-width: 520px) {
 	#menu {
 		display: block;
-		font-size: 1rem;
+		font-size: 1.4rem;
 		border: 0;
 		background: none;
-		color: #000;
+		color: white;
 		position: absolute;
 		top: 16px;
 		right: 16px;
@@ -40,12 +40,7 @@
 		display: flex;
 	}
 
-	header,
-	footer {
-		background-color: #BFCDE0;
-	}
-
-	.figure {
+	#gallery {
 		grid-template-columns: 1fr;
 		place-content: center;
 	}
