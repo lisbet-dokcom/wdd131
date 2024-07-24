@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>Product Review</h1>
@@ -33,14 +34,14 @@
                 </div>
                 <label>Date of Installation<input type="date" name="calender" id="date" required></label>
                 <div class="install">What features did you find useful in the products? (check all that apply)</div>
-                <label><input type="checkbox" name="features" id="useful" value="check">Durability</label>
-                <label><input type="checkbox" name="features" id="useful" value="check">Ease of Use</label>
-                <label><input type="checkbox" name="features" id="useful" value="check">Performance</label>
-                <label><input type="checkbox" name="features" id="useful" value="check">Design</label>
+                <label><input type="checkbox" name="features" id="durable" value="check">Durability</label>
+                <label><input type="checkbox" name="features" id="ease" value="check">Ease of Use</label>
+                <label><input type="checkbox" name="features" id="perform" value="check">Performance</label>
+                <label><input type="checkbox" name="features" id="design" value="check">Design</label>
                 <label>Written Review <span id="optional"></span>
                     <textarea name="written" id="written" cols="50" rows="5" placeholder="write here..."></textarea>
                 </label>
-                <label>Your Name <span id="optional"></span>
+                <label>Your Name
                     <input type="text" name="userName" id="name">
                 </label>
                 <input type="submit" value="Post Review">
