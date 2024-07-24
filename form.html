@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elizabeth | WDD 131 | Formpage">
+    <meta name="author" content="Elizabeth">
+    <title>WDD 131 | Product Review | Elizabeth</title>
+    <script src="scripts/form.js" defer></script>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <fieldset class="wf">
+                <label>Product Name<select name="product" id="product" required>
+                        <option value="" disabled selected>Select a Product....</option>
+                    </select></label>
+                <label>Overall Rating</label>
+                <div class="rating">
+                    <label><input type="radio" name="rating" value="yes" required>*</label>
+                    <label><input type="radio" name="rating" value="yes" required>**</label>
+                    <label><input type="radio" name="rating" value="yes" required>***</label>
+                    <label><input type="radio" name="rating" value="yes" required>****</label>
+                    <label><input type="radio" name="rating" value="yes" required>*****</label>
+                </div>
+                <label>Date of Installation<input type="date" name="calender" id="date" required></label>
+                <div class="install">What features did you find useful in the products? (check all that apply)</div>
+                <label><input type="checkbox" name="features" id="useful" value="check">Durability</label>
+                <label><input type="checkbox" name="features" id="useful" value="check">Ease of Use</label>
+                <label><input type="checkbox" name="features" id="useful" value="check">Performance</label>
+                <label><input type="checkbox" name="features" id="useful" value="check">Design</label>
+                <label>Written Review <span id="optional"></span>
+                    <textarea name="written" id="written" cols="50" rows="5" placeholder="write here..."></textarea>
+                </label>
+                <label>Your Name <span id="optional"></span>
+                    <input type="text" name="userName" id="name">
+                </label>
+                <input type="submit" value="Post Review">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> 🌴 Elizabeth 🌴 Nigeria - <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
