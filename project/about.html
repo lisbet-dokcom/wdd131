@@ -4,12 +4,50 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elizabeth | WDD 131 | Homepage">
+    <meta name="description" content="Elizabeth | WDD 131 | Contact and About">
     <meta name="author" content="Elizabeth">
-    <title>WDD 131 - Dynamic Web Fundamentals - Elizabeth</title>
-    <script src="scripts/getdates.js" defer></script>
-    <link rel="stylesheet" href="styles/base.css">
+    <title>Recipe Book - Contact</title>
+    <script src="scripts/project.js" defer></script>
+    <link rel="stylesheet" href="styles/project.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
+<body>
+    <header>
+        <h1>Recipe Book</h1>
+        <nav class="nav">
+            <a href="home.html">Home</a>
+            <a href="recipe.html">Recipes</a>
+            <a href="about.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Welcome to Recipe Book, your gateway to the vibrant world of Nigerian cuisine! Our website is dedicated
+                to sharing the rich flavors and traditions of Nigerian cooking. Whether you're a foodie, a Nigerian
+                looking for a taste of home, or just curious about new flavors, we invite you to explore our collection
+                of recipes and discover the delicious diversity of Nigerian food.</p>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> Elizabeth - <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>
